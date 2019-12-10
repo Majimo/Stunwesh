@@ -1,0 +1,21 @@
+:host {
+  .header {
+    .header-title {
+      text-transform: uppercase;
+      font-weight: normal;
+      text-align: center;
+      font-size: 16px;
+    }
+  }
+  ion-row {
+    height: 25vh;
+    ion-col {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid black;
+      border-radius: 4px;
+      margin: 2px;
+    }
+  }
+}
