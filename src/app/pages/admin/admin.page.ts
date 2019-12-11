@@ -17,4 +17,11 @@ export class AdminPage implements OnInit {
 
   ngOnInit() {
   }
+
+  goToEquipes() {
+    console.log('1');
+    this.router.navigate(['admin/equipes']);
+    console.log('3')
+    // alert('sans rien dedans');
+  }
 }

@@ -17,6 +17,16 @@ const routes: Routes = [
                     loadChildren: () =>
                         import('./pages/admin/admin.module').then(m => m.AdminPageModule)
                 },
+                {
+                    path: 'equipes',
+                    loadChildren: () =>
+                        import('./pages/admin/pages/equipes/equipes.module').then(m => m.EquipesPageModule)
+                },
+                {
+                    path: 'tournois',
+                    loadChildren: () =>
+                        import('./pages/admin/pages/tournois/tournois.module').then(m => m.TournoisPageModule)
+                },
             ]
           },
           {
@@ -26,6 +36,11 @@ const routes: Routes = [
                     path: '',
                     loadChildren: () =>
                         import('./pages/tournoi/tournoi.module').then(m => m.TournoiPageModule)
+                },
+                {
+                    path: 'tournois',
+                    loadChildren: () =>
+                        import('./pages/admin/pages/tournois/tournois.module').then(m => m.TournoisPageModule)
                 },
             ]
           },
@@ -47,6 +62,10 @@ const routes: Routes = [
         ]
     },
     {path: '**', redirectTo: 'app', pathMatch: 'full'},
+  {
+    path: 'equipes',
+    loadChildren: () => import('./pages/admin/pages/equipes/equipes.module').then( m => m.EquipesPageModule)
+  },
   ];
 
 @NgModule({
